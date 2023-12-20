@@ -4,10 +4,8 @@
 
 // issue The method 'play' isn't defined for the type 'AudioCache'.
 import 'package:flutter/material.dart';
-import 'package:audioplayers/src/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_grocery/helper/route_helper.dart';
 import 'package:flutter_grocery/localization/app_localization.dart';
 import 'package:flutter_grocery/main.dart';

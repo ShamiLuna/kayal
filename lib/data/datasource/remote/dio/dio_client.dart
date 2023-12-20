@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_grocery/data/datasource/remote/dio/logging_interceptor.dart';
-import 'package:flutter_grocery/helper/responsive_helper.dart';
 import 'package:flutter_grocery/utill/app_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -30,8 +29,8 @@ class DioClient {
 
   Future<void> updateHeader({String? getToken, Dio? dioC})async {
     dio?..options.baseUrl = baseUrl
-      ..options.connectTimeout = Duration(seconds: 5)
-      ..options.receiveTimeout = Duration(seconds: 5)
+      ..options.connectTimeout = const Duration(seconds: 5)
+      ..options.receiveTimeout = const Duration(seconds: 5)
       ..httpClientAdapter
       ..options.headers = {
         'Content-Type': 'application/json; charset=UTF-8',
