@@ -55,8 +55,7 @@ class _CustomDrawerState extends State<CustomDrawer>
   final Curve _scaleDownCurve = const Interval(0.0, 0.3, curve: Curves.easeOut);
   final Curve _scaleUpCurve = const Interval(0.0, 1.0, curve: Curves.easeOut);
   final Curve _slideOutCurve = const Interval(0.0, 1.0, curve: Curves.easeOut);
-  final Curve _slideInCurve =
-  const Interval(0.0, 1.0, curve: Curves.easeOut); // Curves.bounceOut
+  final Curve _slideInCurve = const Interval(0.0, 1.0, curve: Curves.easeOut); // Curves.bounceOut
 
   /// check the slide direction
 
@@ -166,16 +165,17 @@ class _CustomDrawerState extends State<CustomDrawer>
     final int rtlSlide = CustomDrawer.isRTL(context) ? -1 : 1;
 
     final slideAmount = (widget.slideWidth - slide) * slidePercent * rtlSlide;
-    final contentScale = (scale ?? 1.0) - (0.4 * scalePercent);
+    final contentScale = (scale ?? 1.0) - (0.6 * scalePercent);
     final cornerRadius = widget.borderRadius * _percentOpen;
     final rotationAngle =
         (((angle ?? widget.angle) * pi * rtlSlide) / 180) * _percentOpen;
 
     return Transform(
-      transform: Matrix4.translationValues(slideAmount, 0, 0)
+      transform:
+      Matrix4.translationValues(slideAmount, 0, 0)
         ..rotateZ(rotationAngle)
         ..scale(contentScale, contentScale),
-      alignment: Alignment.centerLeft,
+      alignment: Alignment.centerRight,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(cornerRadius),
         child: container,

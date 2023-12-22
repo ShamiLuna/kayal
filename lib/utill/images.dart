@@ -68,7 +68,7 @@ class Images {
   static const String locationBannerImage = 'assets/image/location_banner_image.png';
   static const String favouriteNoDataImage = 'assets/image/favourite_no_data.png';
   static const String emptyOrderImage = 'assets/image/empty_order_image.png';
-
+  static const String mainImage = 'assets/image/web_bar_logo_place_holder.png';
 
 
 
