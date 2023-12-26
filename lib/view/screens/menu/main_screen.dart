@@ -14,7 +14,6 @@ import 'package:flutter_grocery/provider/location_provider.dart';
 import 'package:flutter_grocery/provider/profile_provider.dart';
 import 'package:flutter_grocery/provider/splash_provider.dart';
 import 'package:flutter_grocery/provider/theme_provider.dart';
-import 'package:flutter_grocery/utill/app_constants.dart';
 import 'package:flutter_grocery/utill/dimensions.dart';
 import 'package:flutter_grocery/utill/images.dart';
 import 'package:flutter_grocery/utill/styles.dart';
@@ -138,7 +137,7 @@ class _MainScreenState extends State<MainScreen> {
                           widget.drawerController.toggle();
                         }),
                     title: splash.pageIndex == 0 ? Row(children: [
-                      Image.asset(Images.mainImage, width: 90),
+                      Image.asset(Images.mainImage, height: 120, width: 188,),
                       // const SizedBox(width: Dimensions.paddingSizeSmall),
                       // Expanded(child: Text(
                       //   AppConstants.appName, maxLines: 1, overflow: TextOverflow.ellipsis,

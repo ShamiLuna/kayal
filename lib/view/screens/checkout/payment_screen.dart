@@ -30,7 +30,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
   late String selectedUrl;
   double value = 0.0;
   final bool _isLoading = true;
-  PullToRefreshController? pullToRefreshController;
+  PullToRefreshController?  pullToRefreshController;
   late MyInAppBrowser browser;
 
   @override
@@ -64,16 +64,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
       ),
       onRefresh: () async {
         if (Platform.isAndroid) {
-          browser.webViewController.reload();
+          browser.webViewController?.reload();
         } else if (Platform.isIOS) {
-          browser.webViewController.loadUrl(urlRequest: URLRequest(url: await browser.webViewController.getUrl()));
+          browser.webViewController?.loadUrl(urlRequest: URLRequest(url: await browser.webViewController?.getUrl()));
         }
       },
     );
-    browser.pullToRefreshController = pullToRefreshController;
+    pullToRefreshController = pullToRefreshController;
 
     await browser.openUrlRequest(
-      urlRequest: URLRequest(url: Uri.parse(selectedUrl)),
+      urlRequest: URLRequest(url: WebUri.uri(selectedUrl as Uri)),
       options: InAppBrowserClassOptions(
         inAppWebViewGroupOptions: InAppWebViewGroupOptions(
           crossPlatform: InAppWebViewOptions(useShouldOverrideUrlLoading: true, useOnLoadResource: true),

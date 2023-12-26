@@ -52,10 +52,10 @@ class CustomDrawer extends StatefulWidget {
 
 class _CustomDrawerState extends State<CustomDrawer>
     with SingleTickerProviderStateMixin {
-  final Curve _scaleDownCurve = const Interval(0.0, 0.3, curve: Curves.easeOut);
-  final Curve _scaleUpCurve = const Interval(0.0, 1.0, curve: Curves.easeOut);
-  final Curve _slideOutCurve = const Interval(0.0, 1.0, curve: Curves.easeOut);
-  final Curve _slideInCurve = const Interval(0.0, 1.0, curve: Curves.easeOut); // Curves.bounceOut
+  final Curve _scaleDownCurve = const Interval(0.0, 0.3, curve: Curves.easeIn);
+  final Curve _scaleUpCurve = const Interval(0.0, 1.0, curve: Curves.easeIn);
+  final Curve _slideOutCurve = const Interval(0.0, 1.0, curve: Curves.easeIn);
+  final Curve _slideInCurve = const Interval(0.0, 1.0, curve: Curves.easeIn); // Curves.bounceOut
 
   /// check the slide direction
 

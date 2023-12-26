@@ -42,7 +42,7 @@ dependencies:
   phone_number: ^2.0.1
   country_code_picker: 3.0.0
   flutter_typeahead: ^5.0.1
-  flutter_inappwebview: ^5.7.2+3
+  flutter_inappwebview: ^6.0.0
   cached_network_image: ^3.2.3
   audioplayers: ^5.2.1
   flutter_facebook_auth: ^5.0.6
