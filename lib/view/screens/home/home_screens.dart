@@ -131,7 +131,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           && flashDealProvider.flashDealModel!.products!.isEmpty
                           ? const SizedBox() :
                       Column(children: [
-
                         InkWell(
                           hoverColor: Colors.transparent,
                           onTap: () => Navigator.pushNamed(context, RouteHelper.getHomeItemRoute(ProductType.flashSale)),

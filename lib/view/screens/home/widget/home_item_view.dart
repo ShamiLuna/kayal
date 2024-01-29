@@ -60,6 +60,7 @@ class HomeItemView extends StatelessWidget {
                       child: ProductWidget(
                         isGrid: isFeaturedItem ? false : true,
                         product: productList![index],
+
                         productType: ProductType.dailyItem,
                       ),
                     );

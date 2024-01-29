@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_grocery/data/datasource/remote/dio/logging_interceptor.dart';
@@ -29,8 +28,8 @@ class DioClient {
 
   Future<void> updateHeader({String? getToken, Dio? dioC})async {
     dio?..options.baseUrl = baseUrl
-      ..options.connectTimeout = const Duration(seconds: 5)
-      ..options.receiveTimeout = const Duration(seconds: 5)
+      ..options.connectTimeout = const Duration(seconds: 15)
+      ..options.receiveTimeout = const Duration(seconds: 15)
       ..httpClientAdapter
       ..options.headers = {
         'Content-Type': 'application/json; charset=UTF-8',
@@ -38,7 +37,6 @@ class DioClient {
         'X-localization': sharedPreferences.getString(AppConstants.languageCode)
             ?? AppConstants.languages[0].languageCode,
         'guest-id': sharedPreferences.getString(AppConstants.guestId) ?? '',
-
       };
 
     dio?.interceptors.add(loggingInterceptor);

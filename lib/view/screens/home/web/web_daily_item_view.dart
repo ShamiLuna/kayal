@@ -85,6 +85,8 @@ class WebDailyItemView extends StatelessWidget {
                             placeholder: Images.getPlaceHolderImage(context),
                             image: '${Provider.of<SplashProvider>(context, listen: false).baseUrls!.productImageUrl}'
                                 '/${productProvider.dailyItemList![index].image![0]}',
+
+
                             imageErrorBuilder: (c, o, s) => Image.asset(Images.getPlaceHolderImage(context), width: 100, height: 150, fit: BoxFit.cover),
                           ),
                         ),
@@ -108,7 +110,11 @@ class WebDailyItemView extends StatelessWidget {
                       style: poppinsRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall),
                       maxLines: 2, overflow: TextOverflow.ellipsis,
                     ),
-
+                    // Text(
+                    //   '${productProvider.dailyItemList![index].id} ${productProvider.dailyItemList![index].status}',
+                    //   style: poppinsRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall),
+                    //   maxLines: 2, overflow: TextOverflow.ellipsis,
+                    // ),
 
 
                     CustomDirectionality(child: Text(

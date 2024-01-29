@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:ui';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart' show defaultTargetPlatform, kDebugMode, kIsWeb;
@@ -76,7 +75,7 @@ Future<void> main() async {
     ));
 
     await FacebookAuth.instance.webAndDesktopInitialize(
-      appId: "YOUR_FACEBOOK_KEY_HERE",
+      appId: "1:371966886791:web:a8bc1483ca19ac80778922",
       cookie: true,
       xfbml: true,
       version: "v13.0",
@@ -131,6 +130,7 @@ Future<void> main() async {
       ChangeNotifierProvider(create: (context) => di.sl<FlashDealProvider>()),
     ],
     child: MyApp(orderID: orderID, isWeb: !kIsWeb),
+
   ));
 }
 
@@ -230,7 +230,8 @@ class _MyAppState extends State<MyApp> {
 class MyHttpOverrides extends HttpOverrides {
   @override
   HttpClient createHttpClient(SecurityContext? context) {
-    return super.createHttpClient(context)..badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+    return super.createHttpClient(context)..badCertificateCallback = (X509Certificate cert,
+        String host, int port) => true;
   }
 }
 

@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW" />
@@ -35,7 +36,10 @@
         android:allowBackup="false"
         android:fullBackupContent="false"
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
             android:value="YOUR_MAP_KEY_HERE" />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -97,5 +101,9 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <uses-library
+        android:name="org.apache.http.legacy"
+        android:required="false" />
+
     </application>
 </manifest>
