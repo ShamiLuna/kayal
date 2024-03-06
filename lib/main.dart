@@ -216,13 +216,11 @@ class _MyAppState extends State<MyApp> {
                   && !splashProvider.getAcceptCookiesStatus(splashProvider.configModel!.cookiesManagement!.content)
                   && splashProvider.cookiesShow)
                 const Positioned.fill(child: Align(alignment: Alignment.bottomCenter, child: CookiesView())),
-
             ])),
           ),
 
         );
       },
-
     );
   }
 }
