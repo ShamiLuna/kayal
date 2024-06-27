@@ -96,7 +96,7 @@ class PlaceOrderButtonView extends StatelessWidget {
                     productId: cartList[index].id, price: cartList[index].price,
                     discountAmount: cartList[index].discountedPrice,
                     quantity: cartList[index].quantity, taxAmount: cartList[index].tax,
-                    variant: '', variation: [Variation(type: cartList[index].variation != null ? cartList[index].variation!.type : null)],
+                    variant: '', variation: [Variation(type: cartList[index].variation?.type)],
                   );
                   carts.add(cart);
                 }
